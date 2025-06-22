@@ -16,7 +16,7 @@ export const Booked = () => {
 
   async function getBookings() {
     axios
-      .post("http://localhost:4000/api/v1/property/getBookings", {
+      .post("https://stayfinder-feat.onrender.com/api/v1/property/getBookings", {
         userId: signupData._id,
       })
       .then((response) => {
@@ -31,7 +31,7 @@ export const Booked = () => {
   async function deleteBooking() {
     console.log("Inside function");
     axios
-      .post("http://localhost:4000/api/v1/property/deleteBooking", {
+      .post("https://stayfinder-feat.onrender.com/api/v1/property/deleteBooking", {
         bookingId,
         userId: signupData._id,
       })
