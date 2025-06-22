@@ -39,7 +39,7 @@ function SignupForm() {
     axios
       .post("https://stayfinder-feat.onrender.com/api/v1/auth/sendotp", { email })
       .then((response) => {
-        localStorage.setItem("signupData", JSON.stringify(response.data.user));
+        localStorage.setItem("signupData", JSON.stringify(formData));
         dispatch(setSignupData(formData));
         toast.dismiss(id);
         navigate("/verify-email");
