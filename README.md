@@ -11,7 +11,7 @@
 - 💳 **Secure Payments** integration (Razorpay)
 - 🔐 **Authentication** using JWT (Register/Login)
 - 📱 **Responsive UI** that works seamlessly on all devices
-- ⚙️ **Cutomer Panel** to manage listings and bookings
+- ⚙️ **Customer Panel** to manage listings and bookings
 
 ## 🧑‍💻 Tech Stack
 
