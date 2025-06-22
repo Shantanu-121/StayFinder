@@ -25,13 +25,14 @@ export const Property = () => {
   } = useForm();
   const partySize = watch("party-size") || 1;
   const navigate = useNavigate();
+  
   useEffect(() => {
     if (signupData == null) {
       navigate("/login");
     }
     console.log("Property Id ->", propertyId);
     axios
-      .post(`http://localhost:4000/api/v1/property/getPropertyDeails`, {
+      .post(`https://stayfinder-feat.onrender.com/api/v1/property/getPropertyDeails`, {
         propertyId: propertyId,
       })
       .then((response) => {
@@ -50,7 +51,7 @@ export const Property = () => {
 
     if (result.success) {
       axios
-        .post("http://localhost:4000/api/v1/property/bookProperty", {
+        .post("https://stayfinder-feat.onrender.com/api/v1/property/bookProperty", {
           propertyId: propertyId,
           date: getValues("date"),
           time: getValues("time"),
