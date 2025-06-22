@@ -20,7 +20,7 @@ export const handlePayment = async ({ amount}) => {
 
   try {
     const { data } = await axios.post(
-      "http://localhost:4000/api/v1/payment/capturePayment",
+      "https://stayfinder-feat.onrender.com/api/v1/payment/capturePayment",
       { amount }
     );
 
@@ -61,7 +61,7 @@ export const handlePayment = async ({ amount}) => {
 async function verifyPayment(bodyData, token, navigate, dispatch, userId) {
   axios
     .post(
-      "http://localhost:4000/api/v1/payment/verifyPayment",
+      "https://stayfinder-feat.onrender.com/api/v1/payment/verifyPayment",
       {
         bodyData,
         userId: userId,
