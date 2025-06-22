@@ -37,7 +37,7 @@ function SignupForm() {
   async function verifyOtp(email) {
     const id = toast.loading("Loading");
     axios
-      .post("http://localhost:4000/api/v1/auth/sendotp", { email })
+      .post("https://stayfinder-feat.onrender.com/api/v1/auth/sendotp", { email })
       .then((response) => {
         localStorage.setItem("signupData", JSON.stringify(response.data.user));
         dispatch(setSignupData(formData));
