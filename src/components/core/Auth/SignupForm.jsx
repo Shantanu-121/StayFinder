@@ -35,11 +35,13 @@ function SignupForm() {
   };
 
   async function verifyOtp(email) {
+    const id = toast.loading("Loading");
     axios
       .post("http://localhost:4000/api/v1/auth/sendotp", { email })
       .then((response) => {
         localStorage.setItem("signupData", JSON.stringify(response.data.user));
         dispatch(setSignupData(formData));
+        toast.dismiss(id);
         navigate("/verify-email");
       })
       .catch((error) => {

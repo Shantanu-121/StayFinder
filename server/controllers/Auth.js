@@ -178,7 +178,6 @@ exports.signUp = async (req, res) => {
       firstName,
       lastName,
       email,
-      contactNumber,
       password: hashedPassword,
       approved: true,
       accountType: accountType,

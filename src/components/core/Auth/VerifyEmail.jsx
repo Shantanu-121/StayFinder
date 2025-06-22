@@ -6,6 +6,7 @@ import { RxCountdownTimer } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 function VerifyEmail() {
   const [otp, setOtp] = useState("");
@@ -21,6 +22,7 @@ function VerifyEmail() {
   }, []);
 
   async function signup() {
+    const id = toast.loading("Loading");
     axios
       .post("http://localhost:4000/api/v1/auth/signup", {
         firstName,
@@ -32,7 +34,11 @@ function VerifyEmail() {
         otp,
       })
       .then((response) => {
-        if (response.data.success) navigate("/login");
+        if (response.data.success) {
+          toast.dismiss(id);
+          toast.success("Account created successfully");
+          navigate("/login");
+        }
       })
       .catch((error) => {
         console.log("VerifyEmail component's error ->", error);
@@ -91,13 +97,6 @@ function VerifyEmail() {
               <BiArrowBack /> Back To Signup
             </p>
           </Link>
-          <button
-            className="flex items-center text-blue-100 gap-x-2"
-            onClick={() => dispatch(sendOtp(signupData.email, navigate))}
-          >
-            <RxCountdownTimer />
-            Resend it
-          </button>
         </div>
       </div>
     </div>
