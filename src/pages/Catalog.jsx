@@ -12,7 +12,7 @@ export const Catalog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/v1/property/showAllProperties`)
+      .get(`https://stayfinder-feat.onrender.com/api/v1/property/showAllProperties`)
       .then((response) => {
         setProperties(response.data.data);
         console.log(response.data.data);
