@@ -39,6 +39,7 @@ function SignupForm() {
     axios
       .post("https://stayfinder-feat.onrender.com/api/v1/auth/sendotp", { email })
       .then((response) => {
+        console.log("Send otp api call response ->", response); 
         localStorage.setItem("signupData", JSON.stringify(formData));
         dispatch(setSignupData(formData));
         toast.dismiss(id);
