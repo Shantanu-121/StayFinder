@@ -29,7 +29,7 @@ function LoginForm() {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/v1/auth/login", {
+      .post("https://stayfinder-feat.onrender.com/api/v1/auth/login", {
         email,
         password,
       })
