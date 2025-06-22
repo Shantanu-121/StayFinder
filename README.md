@@ -6,13 +6,12 @@
 
 ## 🚀 Features
 
-- 🔍 **Search and Filter** stays based on location, price, category, and more
 - 🏠 **List Properties** with images, descriptions, location, amenities, and pricing
 - 🛒 **Book Stays** with real-time availability and booking system
 - 💳 **Secure Payments** integration (Razorpay)
 - 🔐 **Authentication** using JWT (Register/Login)
 - 📱 **Responsive UI** that works seamlessly on all devices
-- ⚙️ **Admin Panel** to manage listings and bookings (optional)
+- ⚙️ **Cutomer Panel** to manage listings and bookings (optional)
 
 ## 🧑‍💻 Tech Stack
 
