@@ -2,7 +2,7 @@
 
 **StayFinder** is a full-stack web application inspired by Airbnb. It allows users to browse, filter, and book stays with an intuitive and responsive interface. Built with the MERN stack (MongoDB, Express, React, Node.js), StayFinder brings the modern experience of property rental platforms to life.
 
-[StayFinder](https://stay-finder-ashy.vercel.app/)
+[StayFinder](https://stay-finder-lyart.vercel.app/)
 
 ## 🚀 Features
 
