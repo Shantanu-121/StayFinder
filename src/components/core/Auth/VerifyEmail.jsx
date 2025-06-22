@@ -24,7 +24,7 @@ function VerifyEmail() {
   async function signup() {
     const id = toast.loading("Loading");
     axios
-      .post("http://localhost:4000/api/v1/auth/signup", {
+      .post("https://stayfinder-feat.onrender.com/api/v1/auth/signup", {
         firstName,
         lastName,
         email,
