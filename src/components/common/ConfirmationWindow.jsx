@@ -30,6 +30,8 @@ export const ConfirmationWindow = ({
               if (!type) {
                 dispatch(setToken(null));
                 dispatch(setSignupData(null));
+                localStorage.setItem("signupData", JSON.stringify(null));
+                localStorage.setItem("token", JSON.stringify(null));
                 navigate("/");
               } else {
                 showConfirmation(false);
